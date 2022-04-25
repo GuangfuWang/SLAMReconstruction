@@ -1,0 +1,1 @@
+set(Main_SRC ${PROGRAM_PREFIX}/RGBDMain.cpp)

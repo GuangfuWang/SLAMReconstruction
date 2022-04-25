@@ -1,0 +1,11 @@
+
+#ifndef SLAMRECONSTRUCTION_IMU_H
+#define SLAMRECONSTRUCTION_IMU_H
+
+
+class IMU {
+
+};
+
+
+#endif //SLAMRECONSTRUCTION_IMU_H

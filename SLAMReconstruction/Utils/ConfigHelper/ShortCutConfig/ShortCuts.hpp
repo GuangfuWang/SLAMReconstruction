@@ -1,0 +1,11 @@
+
+#ifndef SPATIALRECONSTRUCTION_SHORTCUTS_H
+#define SPATIALRECONSTRUCTION_SHORTCUTS_H
+
+namespace gf{
+    class ShortCutConfig{
+
+    };
+}
+
+#endif //SPATIALRECONSTRUCTION_SHORTCUTS_H

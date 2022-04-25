@@ -1,0 +1,17 @@
+message(STATUS "OS: ${CMAKE_HOST_SYSTEM}")
+if (${CMAKE_HOST_WIN32})
+    add_compile_definitions("GF_WINDOWS")
+elseif (${CMAKE_HOST_UNIX})
+    add_compile_definitions("GF_LINUX")
+elseif (${CMAKE_HOST_APPLE})
+    add_compile_definitions("GF_APPLE")
+else ()
+    add_compile_definitions("GF_UNSUPPORTED_OS")
+endif ()
+
+if (${CMAKE_HOST_WIN32})
+    # this is due to windows system will open a cmd window.
+    set(PLAT_FLAG "WIN32")
+else ()
+    set(PLAT_FLAG "")
+endif ()

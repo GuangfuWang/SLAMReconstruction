@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsPanel</class>
+ <widget class="QWidget" name="SettingsPanel">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>790</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>790</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Icons/MainWindowIcon.qrc">
+    <normaloff>:/Icons/Setting.svg</normaloff>:/Icons/Setting.svg</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Settings for this project</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>5</number>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>true</bool>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <attribute name="icon">
+       <iconset resource="../Icons/MainWindowIcon.qrc">
+        <normaloff>:/Icons/3D MODEL.svg</normaloff>:/Icons/3D MODEL.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Render Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout" stretch="9,1,1">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>468</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>Confirm</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Icons/MainWindowIcon.qrc">
+               <normaloff>:/Icons/ok.svg</normaloff>:/Icons/ok.svg</iconset>
+             </property>
+             <property name="default">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Icons/MainWindowIcon.qrc">
+               <normaloff>:/Icons/cancel.svg</normaloff>:/Icons/cancel.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1,1">
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="minimumSize">
+              <size>
+               <width>739</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>GroupBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>GroupBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>GroupBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>GroupBox</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="icon">
+       <iconset resource="../Icons/MainWindowIcon.qrc">
+        <normaloff>:/Icons/ROBOT_TXT.svg</normaloff>:/Icons/ROBOT_TXT.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>SLAM Sensor Settings</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="icon">
+       <iconset resource="../Icons/MainWindowIcon.qrc">
+        <normaloff>:/Icons/ROBOT_TXT.svg</normaloff>:/Icons/ROBOT_TXT.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Other SLAM Settings</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="icon">
+       <iconset resource="../Icons/MainWindowIcon.qrc">
+        <normaloff>:/Icons/custum.svg</normaloff>:/Icons/custum.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Custum Settings</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="icon">
+       <iconset resource="../Icons/MainWindowIcon.qrc">
+        <normaloff>:/Icons/shortcuts.svg</normaloff>:/Icons/shortcuts.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Shortcut Settings</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Icons/MainWindowIcon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
