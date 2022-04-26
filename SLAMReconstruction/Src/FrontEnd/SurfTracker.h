@@ -1,0 +1,14 @@
+//
+// Created by wgf on 22-4-25.
+//
+
+#ifndef SLAMRECONSTRUCTION_SURFTRACKER_H
+#define SLAMRECONSTRUCTION_SURFTRACKER_H
+
+
+class SurfTracker {
+
+};
+
+
+#endif //SLAMRECONSTRUCTION_SURFTRACKER_H

@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="SplashWindowIcon">
+    <file alias="splash.gif">Icons/splash.gif</file>
+  </qresource>
+  <qresource prefix="MainWindow">
+    <file alias="MainWindowIcon.png">Icons/MainWindowIcon.png</file>
+  </qresource>
+  <qresource prefix="/Icons">
+    <file alias="cancel.svg">Icons/cancel.svg</file>
+    <file alias="ok.svg">Icons/ok.svg</file>
+    <file alias="shortcuts.svg">Icons/shortcuts.svg</file>
+    <file alias="custum.svg">Icons/custum.svg</file>
+    <file alias="ROBOT_TXT.svg">Icons/ROBOT_TXT.svg</file>
+    <file alias="3D MODEL.svg">Icons/3D MODEL.svg</file>
+    <file alias="dataset.svg">Icons/dataset.svg</file>
+    <file alias="ply.svg">Icons/ply.svg</file>
+    <file alias="stl.png">Icons/stl.png</file>
+    <file alias="FBX.svg">Icons/FBX.svg</file>
+    <file alias="obj.svg">Icons/obj.svg</file>
+    <file alias="exit.svg">Icons/exit.svg</file>
+    <file alias="open.svg">Icons/open.svg</file>
+    <file alias="save.svg">Icons/save.svg</file>
+    <file alias="Setting.svg">Icons/Setting.svg</file>
+    <file alias="start.svg">Icons/start.svg</file>
+    <file alias="stop.svg">Icons/stop.svg</file>
+    <file alias="pause.svg">Icons/pause.svg</file>
+  </qresource>
+</RCC>

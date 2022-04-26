@@ -88,8 +88,9 @@ namespace gf {
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush7);
 #endif
         this->setPalette(palette);
-        mShadersAvailable = createUniqueRef<RenderShaders>();
-        mRenderCamera     = createUniqueRef<RenderCamera>();
+        mVertexShader = createUniqueRef<QOpenGLShader>(QOpenGLShader::Vertex);
+        mFragShader = createUniqueRef<QOpenGLShader>(QOpenGLShader::Fragment);
+        mRenderCamera     = createUniqueRef<Qt3DRender::QCamera>();
 
         setupShaders();
 
@@ -106,20 +107,16 @@ namespace gf {
             QOpenGLFunctions::glEnable(GL_MULTISAMPLE);
         }
         mShaderProgram = createUniqueRef<QOpenGLShaderProgram>();
-        mShadersAvailable->compileAllShaders(filenames, shaderType, shaderItems);
-        if (mShadersAvailable->shaderCompiled) {
+//        mShadersAvailable->compileAllShaders(filenames, shaderType, shaderItems);
+        if (1) {
             ////////////////////////////////////////////////////////////////////
             QOpenGLShader *tV = new QOpenGLShader(QOpenGLShader::Vertex);
             QOpenGLShader *tF = new QOpenGLShader(QOpenGLShader::Fragment);
-            tV->compileSourceCode(vsrc);
-            tF->compileSourceCode(fsrc);
+//            tV->compileSourceCode(vsrc);
+//            tF->compileSourceCode(fsrc);
             mShaderProgram->addShader(tV);
             mShaderProgram->addShader(tF);
             ///////////////////////////////////////////////////////////////////
-//	mShaderProgram->addShader(
-//		mShadersAvailable->mCompliedShaders[mShadersAvailable->mCurrentVertexShader].get());
-//	mShaderProgram->addShader(
-//		mShadersAvailable->mCompliedShaders[mShadersAvailable->mCurrentFragmentShader].get());
             mShaderProgram->link();
             mShaderProgram->bind();
             mVBO = QOpenGLBuffer(QOpenGLBuffer::VertexBuffer);
@@ -151,7 +148,7 @@ namespace gf {
                 }
                 mShaderProgram->setAttributeBuffer(aPos, GL_FLOAT, 0, 3, 0);   //设置顶点属性
                 mShaderProgram->enableAttributeArray(aPos); //使能顶点属性
-                mRenderCamera->update(mShaderProgram);
+//                mRenderCamera->update(mShaderProgram);
             } else {
                 mEBO.create();
                 if (!mEBO.isCreated()) {
@@ -181,7 +178,7 @@ namespace gf {
         QOpenGLWidget::paintGL();
         mShaderProgram->bind();
         mVAO.bind();
-        mRenderCamera->update(mShaderProgram);
+//        mRenderCamera->update(mShaderProgram);
 
         if (mDrawType == DrawTypeEnum::ARRAY)QOpenGLFunctions::glDrawArrays(GL_TRIANGLES, 0, 3);
         else if (mDrawType == DrawTypeEnum::ELEMENT)
@@ -208,10 +205,10 @@ namespace gf {
     void OpenGLWindow::mousePressEvent(QMouseEvent *event) {
         setMouseTracking(true);
         if (event->buttons()==Qt::LeftButton) {
-            mRenderCamera->setMousePos(event->pos());
+//            mRenderCamera->setMousePos(event->pos());
         }
         if (event->buttons()==Qt::RightButton){
-            mRenderCamera->setMousePos(event->pos());
+//            mRenderCamera->setMousePos(event->pos());
         }
         update();
         setMouseTracking(false);
@@ -222,18 +219,18 @@ namespace gf {
     }
     void OpenGLWindow::wheelEvent(QWheelEvent *event) {
         const int degree = event->delta();
-        mRenderCamera->zoom(degree);
+//        mRenderCamera->zoom(degree);
         update();
     }
     void OpenGLWindow::mouseMoveEvent(QMouseEvent *event) {
         if (event->buttons()& Qt::LeftButton){
-            mRenderCamera->rotate(event->pos());
+//            mRenderCamera->rotate(event->pos());
         }
         if (event->buttons()& Qt::RightButton){
-            mRenderCamera->pan(event->pos());
+//            mRenderCamera->pan(event->pos());
         }
         update();
-        mRenderCamera->setMousePos(event->pos());
+//        mRenderCamera->setMousePos(event->pos());
     }
     void OpenGLWindow::mouseReleaseEvent(QMouseEvent *event) {
         update();

@@ -3,7 +3,7 @@
 #define SPATIALRECONSTRUCTION_ALIGNEDMEMORYALLOC_H
 
 #include <memory>
-#include "SpatialReconstruction/Util/Math/MathUtil.h"
+#include "SLAMReconstruction/Utils/Math/MathUtil.h"
 #ifdef GF_LINUX
 #include <stdlib.h>
 #elif defined(GF_WINDOWS)

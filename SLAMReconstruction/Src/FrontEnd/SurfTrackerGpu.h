@@ -1,0 +1,14 @@
+//
+// Created by wgf on 22-4-25.
+//
+
+#ifndef SLAMRECONSTRUCTION_SURFTRACKERGPU_H
+#define SLAMRECONSTRUCTION_SURFTRACKERGPU_H
+
+
+class SurfTrackerGpu {
+
+};
+
+
+#endif //SLAMRECONSTRUCTION_SURFTRACKERGPU_H

@@ -1,6 +1,6 @@
 #include "MainWindow.h"
-#include "ui_MainWindow.h"
-#include "ui_Settings.h"
+#include "SLAMReconstruction/UI/WindowUI/Designer/ui_MainWindow.h"
+#include "SLAMReconstruction/UI/WindowUI/Designer/ui_Settings.h"
 
 namespace gf {
     MainWindow::MainWindow(QMainWindow *parent) :

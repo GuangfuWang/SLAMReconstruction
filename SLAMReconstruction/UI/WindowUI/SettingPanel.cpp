@@ -1,5 +1,5 @@
 #include "SettingPanel.h"
-#include "ui_Settings.h"
+#include "SLAMReconstruction/UI/WindowUI/Designer/ui_Settings.h"
 
 namespace gf{
 

@@ -2,7 +2,7 @@
 #ifndef SPATIALRECONSTRUCTION_MATHUTIL_H
 #define SPATIALRECONSTRUCTION_MATHUTIL_H
 
-#include "SpatialReconstruction/Util/Def/Def.h"
+#include "SLAMReconstruction/Utils/Def/Def.h"
 
 namespace gf{
     /// calculate power of 2 (slightly larger or equal than cap.).

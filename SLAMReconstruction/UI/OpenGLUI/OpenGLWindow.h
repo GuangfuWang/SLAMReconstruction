@@ -2,15 +2,13 @@
 #ifndef SLAMRECONSTRUCTION_OPENGLWINDOW_H
 #define SLAMRECONSTRUCTION_OPENGLWINDOW_H
 
+#include <Qt3DRender/QCamera>
 #include <QOpenGLWidget>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLFunctions>
 #include <QOpenGLBuffer>
 #include <QOpenGLVertexArrayObject>
 #include <Utils/Def/Def.h>
-
-#include "RenderCamera.h"
-#include "RenderShaders.h"
 
 namespace gf {
     class OpenGLWindow : public QOpenGLWidget, public QOpenGLFunctions {
@@ -43,9 +41,13 @@ namespace gf {
 
         void keyPressEvent(QKeyEvent *event) override;
 
-        void dragEnterEvent(QDragEnterEvent *event) override;
+        void dragEnterEvent(QDragEnterEvent *event) override {
 
-        void dropEvent(QDropEvent *event) override;
+        }
+
+        void dropEvent(QDropEvent *event) override {
+
+        }
 
     public:
         void handleData(float *vertices, unsigned int size,
@@ -69,8 +71,9 @@ namespace gf {
 
     private:
         UniqueRef<QOpenGLShaderProgram>    mShaderProgram;
-        UniqueRef<RenderShaders>           mShadersAvailable;
-        UniqueRef<RenderCamera>            mRenderCamera;
+        UniqueRef<QOpenGLShader>           mVertexShader;
+        UniqueRef<QOpenGLShader>           mFragShader;
+        UniqueRef<Qt3DRender::QCamera>     mRenderCamera;
         QVector<QString>                   filenames;
         QVector<QOpenGLShader::ShaderType> shaderType;
         QVector<unsigned int>              shaderItems;

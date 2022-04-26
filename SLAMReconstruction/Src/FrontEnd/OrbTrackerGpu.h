@@ -1,0 +1,14 @@
+//
+// Created by wgf on 22-4-25.
+//
+
+#ifndef SLAMRECONSTRUCTION_ORBTRACKERGPU_H
+#define SLAMRECONSTRUCTION_ORBTRACKERGPU_H
+
+
+class OrbTrackerGpu {
+
+};
+
+
+#endif //SLAMRECONSTRUCTION_ORBTRACKERGPU_H

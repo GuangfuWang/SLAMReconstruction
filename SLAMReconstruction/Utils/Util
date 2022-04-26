@@ -5,7 +5,6 @@
 #include "Utils/Def/Def.h"
 #include "Utils/Logger/Logger.h"
 #include "Utils/CmdParser/CmdParser.h"
-#include "Utils/ConfigHelper/ShortCutConfig/ShortCuts.hpp"
 #include "Utils/ConfigMapper/ConfigMapper.h"
 
 using CmdParser = gf::CmdParser;

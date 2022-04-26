@@ -17,7 +17,6 @@ namespace gf {
 
     public:
         static Map<QString, unsigned int> mOctreeParamMapper;
-        static UniqueRef<ShortCutConfig> mShortCutsMapper;
         static Map<QString, unsigned char> mKeyPointMapper;
         static UniqueRef<DirMapper> mDirMapper;
     };

@@ -1,1 +1,0 @@
-target_link_libraries(${MainTargetName} PUBLIC ${Qt5_LIBS} ${Assimp_LIBRARY})

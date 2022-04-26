@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'MainWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -410,57 +410,57 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "SLAM Reconstruction", nullptr));
-#if QT_CONFIG(tooltip)
-        MainWindow->setToolTip(QCoreApplication::translate("MainWindow", "SLAM Reconstruction Project", nullptr));
-#endif // QT_CONFIG(tooltip)
-        actionOpen_Dataset->setText(QCoreApplication::translate("MainWindow", "Open Dataset", nullptr));
-        actionOpen_3D_Model->setText(QCoreApplication::translate("MainWindow", "Open 3D Model", nullptr));
-        actionOpen_Vocabulary->setText(QCoreApplication::translate("MainWindow", "Open Vocabulary", nullptr));
-        actionSave_Model->setText(QCoreApplication::translate("MainWindow", "Save Model", nullptr));
-        actionSettings->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        actionExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
-        actionPLY->setText(QCoreApplication::translate("MainWindow", "PLY", nullptr));
-        actionFBX->setText(QCoreApplication::translate("MainWindow", "FBX", nullptr));
-        actionSTL->setText(QCoreApplication::translate("MainWindow", "STL", nullptr));
-        actionOBJ->setText(QCoreApplication::translate("MainWindow", "OBJ", nullptr));
-        actionSTEP->setText(QCoreApplication::translate("MainWindow", "STEP", nullptr));
-        action3DS->setText(QCoreApplication::translate("MainWindow", "3DS", nullptr));
-        actionDAE->setText(QCoreApplication::translate("MainWindow", "DAE", nullptr));
-        actionOpen_Recent->setText(QCoreApplication::translate("MainWindow", "Open Recent", nullptr));
-        actionPLY_2->setText(QCoreApplication::translate("MainWindow", "PLY", nullptr));
-        actionOBJ_2->setText(QCoreApplication::translate("MainWindow", "OBJ", nullptr));
-        actionFBX_2->setText(QCoreApplication::translate("MainWindow", "FBX", nullptr));
-        actionSTL_2->setText(QCoreApplication::translate("MainWindow", "STL", nullptr));
-        actionSTEP_2->setText(QCoreApplication::translate("MainWindow", "STEP", nullptr));
-        actionDAE_2->setText(QCoreApplication::translate("MainWindow", "DAE", nullptr));
-        actionCamera->setText(QCoreApplication::translate("MainWindow", "RGBD Camera", nullptr));
-        actionIMU->setText(QCoreApplication::translate("MainWindow", "IMU", nullptr));
-        actionStereo_Camera->setText(QCoreApplication::translate("MainWindow", "Stereo Camera", nullptr));
-        actionMono_Camera->setText(QCoreApplication::translate("MainWindow", "Mono Camera", nullptr));
-        actionLasers->setText(QCoreApplication::translate("MainWindow", "Lidars", nullptr));
-        actionOthers->setText(QCoreApplication::translate("MainWindow", "Others", nullptr));
-        actionStart->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
-        actionPause->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
-        actionStop->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
-        actionExit_Control->setText(QCoreApplication::translate("MainWindow", "Exit Control", nullptr));
-        actionWiki->setText(QCoreApplication::translate("MainWindow", "Project Wiki", nullptr));
-        actionShortcuts->setText(QCoreApplication::translate("MainWindow", "Shortcuts", nullptr));
-        actionTips_of_day->setText(QCoreApplication::translate("MainWindow", "Tips of day", nullptr));
-        actionFeedbacks->setText(QCoreApplication::translate("MainWindow", "Feedbacks", nullptr));
-        actionSuggestions->setText(QCoreApplication::translate("MainWindow", "Suggestions", nullptr));
-        actionAbout_me->setText(QCoreApplication::translate("MainWindow", "About me", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
-        menu->setTitle(QCoreApplication::translate("MainWindow", "Files", nullptr));
-        menuSave_As->setTitle(QCoreApplication::translate("MainWindow", "Save As", nullptr));
-        menuOpen_File->setTitle(QCoreApplication::translate("MainWindow", "Open File", nullptr));
-        menuSensors->setTitle(QCoreApplication::translate("MainWindow", "Sensors", nullptr));
-        menuControls->setTitle(QCoreApplication::translate("MainWindow", "Controls", nullptr));
-        menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
-        toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "SLAM Reconstruction", nullptr));
+#ifndef QT_NO_TOOLTIP
+        MainWindow->setToolTip(QApplication::translate("MainWindow", "SLAM Reconstruction Project", nullptr));
+#endif // QT_NO_TOOLTIP
+        actionOpen_Dataset->setText(QApplication::translate("MainWindow", "Open Dataset", nullptr));
+        actionOpen_3D_Model->setText(QApplication::translate("MainWindow", "Open 3D Model", nullptr));
+        actionOpen_Vocabulary->setText(QApplication::translate("MainWindow", "Open Vocabulary", nullptr));
+        actionSave_Model->setText(QApplication::translate("MainWindow", "Save Model", nullptr));
+        actionSettings->setText(QApplication::translate("MainWindow", "Settings", nullptr));
+        actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
+        actionPLY->setText(QApplication::translate("MainWindow", "PLY", nullptr));
+        actionFBX->setText(QApplication::translate("MainWindow", "FBX", nullptr));
+        actionSTL->setText(QApplication::translate("MainWindow", "STL", nullptr));
+        actionOBJ->setText(QApplication::translate("MainWindow", "OBJ", nullptr));
+        actionSTEP->setText(QApplication::translate("MainWindow", "STEP", nullptr));
+        action3DS->setText(QApplication::translate("MainWindow", "3DS", nullptr));
+        actionDAE->setText(QApplication::translate("MainWindow", "DAE", nullptr));
+        actionOpen_Recent->setText(QApplication::translate("MainWindow", "Open Recent", nullptr));
+        actionPLY_2->setText(QApplication::translate("MainWindow", "PLY", nullptr));
+        actionOBJ_2->setText(QApplication::translate("MainWindow", "OBJ", nullptr));
+        actionFBX_2->setText(QApplication::translate("MainWindow", "FBX", nullptr));
+        actionSTL_2->setText(QApplication::translate("MainWindow", "STL", nullptr));
+        actionSTEP_2->setText(QApplication::translate("MainWindow", "STEP", nullptr));
+        actionDAE_2->setText(QApplication::translate("MainWindow", "DAE", nullptr));
+        actionCamera->setText(QApplication::translate("MainWindow", "RGBD Camera", nullptr));
+        actionIMU->setText(QApplication::translate("MainWindow", "IMU", nullptr));
+        actionStereo_Camera->setText(QApplication::translate("MainWindow", "Stereo Camera", nullptr));
+        actionMono_Camera->setText(QApplication::translate("MainWindow", "Mono Camera", nullptr));
+        actionLasers->setText(QApplication::translate("MainWindow", "Lidars", nullptr));
+        actionOthers->setText(QApplication::translate("MainWindow", "Others", nullptr));
+        actionStart->setText(QApplication::translate("MainWindow", "Start", nullptr));
+        actionPause->setText(QApplication::translate("MainWindow", "Pause", nullptr));
+        actionStop->setText(QApplication::translate("MainWindow", "Stop", nullptr));
+        actionExit_Control->setText(QApplication::translate("MainWindow", "Exit Control", nullptr));
+        actionWiki->setText(QApplication::translate("MainWindow", "Project Wiki", nullptr));
+        actionShortcuts->setText(QApplication::translate("MainWindow", "Shortcuts", nullptr));
+        actionTips_of_day->setText(QApplication::translate("MainWindow", "Tips of day", nullptr));
+        actionFeedbacks->setText(QApplication::translate("MainWindow", "Feedbacks", nullptr));
+        actionSuggestions->setText(QApplication::translate("MainWindow", "Suggestions", nullptr));
+        actionAbout_me->setText(QApplication::translate("MainWindow", "About me", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 2", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_3), QApplication::translate("MainWindow", "Tab 1", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("MainWindow", "Tab 2", nullptr));
+        menu->setTitle(QApplication::translate("MainWindow", "Files", nullptr));
+        menuSave_As->setTitle(QApplication::translate("MainWindow", "Save As", nullptr));
+        menuOpen_File->setTitle(QApplication::translate("MainWindow", "Open File", nullptr));
+        menuSensors->setTitle(QApplication::translate("MainWindow", "Sensors", nullptr));
+        menuControls->setTitle(QApplication::translate("MainWindow", "Controls", nullptr));
+        menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));
+        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Settings.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -171,21 +171,21 @@ public:
 
     void retranslateUi(QWidget *SettingsPanel)
     {
-        SettingsPanel->setWindowTitle(QCoreApplication::translate("SettingsPanel", "Settings", nullptr));
-#if QT_CONFIG(tooltip)
-        SettingsPanel->setToolTip(QCoreApplication::translate("SettingsPanel", "Settings for this project", nullptr));
-#endif // QT_CONFIG(tooltip)
-        pushButton->setText(QCoreApplication::translate("SettingsPanel", "Confirm", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("SettingsPanel", "Cancel", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("SettingsPanel", "GroupBox", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("SettingsPanel", "GroupBox", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("SettingsPanel", "GroupBox", nullptr));
-        groupBox_4->setTitle(QCoreApplication::translate("SettingsPanel", "GroupBox", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("SettingsPanel", "Render Settings", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("SettingsPanel", "SLAM Sensor Settings", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("SettingsPanel", "Other SLAM Settings", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("SettingsPanel", "Custum Settings", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("SettingsPanel", "Shortcut Settings", nullptr));
+        SettingsPanel->setWindowTitle(QApplication::translate("SettingsPanel", "Settings", nullptr));
+#ifndef QT_NO_TOOLTIP
+        SettingsPanel->setToolTip(QApplication::translate("SettingsPanel", "Settings for this project", nullptr));
+#endif // QT_NO_TOOLTIP
+        pushButton->setText(QApplication::translate("SettingsPanel", "Confirm", nullptr));
+        pushButton_2->setText(QApplication::translate("SettingsPanel", "Cancel", nullptr));
+        groupBox->setTitle(QApplication::translate("SettingsPanel", "GroupBox", nullptr));
+        groupBox_2->setTitle(QApplication::translate("SettingsPanel", "GroupBox", nullptr));
+        groupBox_3->setTitle(QApplication::translate("SettingsPanel", "GroupBox", nullptr));
+        groupBox_4->setTitle(QApplication::translate("SettingsPanel", "GroupBox", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("SettingsPanel", "Render Settings", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("SettingsPanel", "SLAM Sensor Settings", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("SettingsPanel", "Other SLAM Settings", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("SettingsPanel", "Custum Settings", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("SettingsPanel", "Shortcut Settings", nullptr));
     } // retranslateUi
 
 };

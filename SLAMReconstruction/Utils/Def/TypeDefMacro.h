@@ -39,9 +39,9 @@ namespace gf {
     using OctreeType = unsigned int;
     using OctreeDataIndexType = unsigned int;
 
-
-
-#ifdef GF_EIGEN3
+    /**
+     * @NOTE normal type definition will use eigen lib.
+     */
     using Vec2f = Eigen::Vector2f;
     using Vec2d = Eigen::Vector2d;
     using Vec2i = Eigen::Vector2i;
@@ -53,28 +53,26 @@ namespace gf {
     using Vec6f = Eigen::Array<float, 6, 1>;
     using Vec6d = Eigen::Array<double, 6, 1>;
     using Vec6i = Eigen::Array<int, 6, 1>;
-
     using Quaternion = Eigen::Quaterniond;
     using Translation = Eigen::Array<float, 3, 1>;
-
     typedef struct Transformation_ {
         Quaternion q;
         Translation t;
     } Transformation;
-#else
-    using Vec3f = QVector3D;
 
-    using Vec4f = QVector4D;
+    /**
+     * @NOTE Type alias starting with 'Q' meaning Qt version and ONLY used in UI related calculation.
+     */
+    using QVec3f = QVector3D;
+    using QTranslation=QVector3D;
+    using QVec4f = QVector4D;
+    using QQuaternion = QQuaternion;
+    using QTranslation = QVector3D;
+    typedef struct QTransformation_ {
+        QQuaternion  q;
+        QTranslation t;
+    } QTransformation;
 
-    using Quaternion = QQuaternion;
-
-    using Translation = QVector3D;
-
-    typedef struct Transformation_ {
-        Quaternion  q;
-        Translation t;
-    } Transformation;
-#endif
 }
 
 #endif //SPATIALRECONSTRUCTION_TYPEDEFMACRO_H

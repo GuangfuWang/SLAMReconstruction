@@ -13,7 +13,7 @@ set(KERNEL_PREFIX SLAMReconstruction/CudaKernels)
 include_directories("SLAMReconstruction/")
 
 
-# fixme: if you use custum path for all your dependencies, add that path here.
+# fixme: if you use custum path for all your Dependencies, add that path here.
 if (${CMAKE_HOST_WIN32})
     set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} "D:/depend_libs")
 endif ()
