@@ -136,7 +136,7 @@ public:
         verticalLayout_2->addLayout(gridLayout_2);
 
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Icons/3D MODEL.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/Icons/3DMODEL.svg"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(tab, icon3, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));

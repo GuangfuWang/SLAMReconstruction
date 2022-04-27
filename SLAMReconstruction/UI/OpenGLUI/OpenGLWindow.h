@@ -9,6 +9,10 @@
 #include <QOpenGLBuffer>
 #include <QOpenGLVertexArrayObject>
 #include <Utils/Def/Def.h>
+#include "RenderShaders.h"
+#include "RenderCamera.h"
+#include "VertexHolder.h"
+#include "VertexMetaInfo.h"
 
 namespace gf {
     class OpenGLWindow : public QOpenGLWidget, public QOpenGLFunctions {
@@ -31,59 +35,91 @@ namespace gf {
 
         void paintGL() override;
 
+    public:
+
         void mousePressEvent(QMouseEvent *event) override;
 
         void mouseMoveEvent(QMouseEvent *event) override;
 
-        void mouseReleaseEvent(QMouseEvent *event) override;
-
         void wheelEvent(QWheelEvent *event) override;
 
-        void keyPressEvent(QKeyEvent *event) override;
+        void dragEnterEvent(QDragEnterEvent *event) override;
 
-        void dragEnterEvent(QDragEnterEvent *event) override {
-
-        }
-
-        void dropEvent(QDropEvent *event) override {
-
-        }
+        void dropEvent(QDropEvent *event) override;
 
     public:
-        void handleData(float *vertices, unsigned int size,
-                        unsigned int *indices, const unsigned int &vert_type);
+        void setupMASS(const unsigned int &samples_num = 8);
 
-        void setMSAA(const bool &msaa) { this->mMultiSampleAntiAliasingFlag = msaa; }
+        void enableMSAA(const bool &msaa) { mMultiSampleAntiAliasingFlag = msaa; }
+
+        void setRenderDataMetaInfo(const unsigned char &info) { mVertMetaInfo.info = info; }
+
+        void setRenderDataUniColor(const QVec3f &c) { mRenderDataUniColor = c; }
+
+        void setupTextureFile(const QString &t_file) { mTextureFile = t_file; }
 
     private:
-        void determineShaders(const bool &hasNormal,
-                              const bool &hasColor,
-                              const bool &hasBitangent,
-                              const bool &hasTextureCoord,
-                              const bool &hasIndices) {
-            if (hasIndices)mDrawType = ELEMENT;
-            else mDrawType = ARRAY;
-        }
+        void determineShaders(const bool &hasNormal = false,
+                                          const bool &hasColor = true,
+                                          const bool &hasTextureCoord = false,
+                                          const bool &hasIndices = false);
+        void mInitializeGL();
+
+        void mPaintGL();
+
+        void setups();
+
+        void handleData();
+
+        void allocateMemForVBO(unsigned int &bytes_);
 
         void setupShaders();
 
-        void compileShaders();
+        bool setupVertVAO();
+
+        bool setupVertIndexVAO();
+
+        bool setupVertColorVAO();
+
+        bool setupVertColorIndexVAO();
+
+        bool setupVertUVVAO();
+
+        bool setupVertUVIndexVAO();
+
+        bool setupVertUVNormVAO();
+
+        bool setupVertUVNormIndexVAO();
+
+        bool setupVertNormVAO();
+
+        bool setupVertNormIndexVAO();
+
+        bool setupVertColorNormVAO();
+
+        bool setupVertColorNormIndexVAO();
 
     private:
-        UniqueRef<QOpenGLShaderProgram>    mShaderProgram;
-        UniqueRef<QOpenGLShader>           mVertexShader;
-        UniqueRef<QOpenGLShader>           mFragShader;
-        UniqueRef<Qt3DRender::QCamera>     mRenderCamera;
-        QVector<QString>                   filenames;
-        QVector<QOpenGLShader::ShaderType> shaderType;
-        QVector<unsigned int>              shaderItems;
-        QOpenGLBuffer                      mVBO;
-        QOpenGLVertexArrayObject           mVAO;
-        QOpenGLBuffer                      mEBO;
-        Vec3f                              mBgColor;
-        DrawTypeEnum                       mDrawType;
-        bool                               mMultiSampleAntiAliasingFlag;
+        UniqueRef<QOpenGLShaderProgram> mShaderProgram;
+        UniqueRef<RenderShaders>        mShaders;
+        UniqueRef<RenderCamera>         mRenderCamera;
+        QOpenGLBuffer                   mVBO;
+        QOpenGLVertexArrayObject        mVAO;
+        QOpenGLBuffer                   mEBO;
+        QVec3f                          mBgColor;
+        QVec3f                          mRenderDataUniColor;
+        DrawTypeEnum                    mDrawType;
+        unsigned int                    mCurrentShaderType;
+        VertMeta                        mVertMetaInfo;
 
+        float         *mRenderData  = nullptr;
+        unsigned int  *mRenderIndex = nullptr;
+        unsigned int  mNumVertex    = 0;
+        unsigned int  mNumIndex     = 0;
+        unsigned int  mNumFace      = 0; //note we currently only support triangle mesh.
+        bool          mMultiSampleAntiAliasingFlag;
+        unsigned char mMSAASampleNum;
+        QString       mTextureFile  = QString();
     };
 }
 

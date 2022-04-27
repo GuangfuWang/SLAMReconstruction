@@ -67,7 +67,7 @@
       </property>
       <attribute name="icon">
        <iconset resource="../Icons/MainWindowIcon.qrc">
-        <normaloff>:/Icons/3D MODEL.svg</normaloff>:/Icons/3D MODEL.svg</iconset>
+        <normaloff>:/Icons/3DMODEL.svg</normaloff>:/Icons/3DMODEL.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Render Settings</string>

@@ -6,12 +6,30 @@
     <file alias="MainWindowIcon.png">Icons/MainWindowIcon.png</file>
   </qresource>
   <qresource prefix="/Icons">
+    <file>Icons/today-tips.svg</file>
+    <file>Icons/suggestions.svg</file>
+    <file>Icons/ic-feedback.svg</file>
+    <file>Icons/quick.svg</file>
+    <file>Icons/exit-ctl.svg</file>
+    <file>Icons/home.svg</file>
+    <file>Icons/wiki.svg</file>
+    <file>Icons/otherhardware.svg</file>
+    <file>Icons/laser.png</file>
+    <file>Icons/RGBD.jpg</file>
+    <file>Icons/stereo.jpeg</file>
+    <file>Icons/gyro.svg</file>
+    <file>Icons/camera.svg</file>
+    <file>Icons/open-recent.svg</file>
+    <file>Icons/dae.svg</file>
+    <file>Icons/step.svg</file>
+    <file>Icons/3ds.svg</file>
+    <file>Icons/voc.svg</file>
+    <file alias="3DMODEL.svg">Icons/3DMODEL.svg</file>
     <file alias="cancel.svg">Icons/cancel.svg</file>
     <file alias="ok.svg">Icons/ok.svg</file>
     <file alias="shortcuts.svg">Icons/shortcuts.svg</file>
     <file alias="custum.svg">Icons/custum.svg</file>
     <file alias="ROBOT_TXT.svg">Icons/ROBOT_TXT.svg</file>
-    <file alias="3D MODEL.svg">Icons/3D MODEL.svg</file>
     <file alias="dataset.svg">Icons/dataset.svg</file>
     <file alias="ply.svg">Icons/ply.svg</file>
     <file alias="stl.png">Icons/stl.png</file>
@@ -24,5 +42,19 @@
     <file alias="start.svg">Icons/start.svg</file>
     <file alias="stop.svg">Icons/stop.svg</file>
     <file alias="pause.svg">Icons/pause.svg</file>
+  </qresource>
+  <qresource prefix="Shaders">
+    <file alias="VertCColorONorm.glsl">Shaders/VertexShaders/VertCColorONorm.glsl</file>
+    <file alias="VertCColorWNorm.glsl">Shaders/VertexShaders/VertCColorWNorm.glsl</file>
+    <file alias="VertUniColorONorm.glsl">Shaders/VertexShaders/VertUniColorONorm.glsl</file>
+    <file alias="VertUniColorWNorm.glsl">Shaders/VertexShaders/VertUniColorWNorm.glsl</file>
+    <file alias="VertUVONorm.glsl">Shaders/VertexShaders/VertUVONorm.glsl</file>
+    <file alias="VertUVWNorm.glsl">Shaders/VertexShaders/VertUVWNorm.glsl</file>
+    <file alias="FragCColorONorm.glsl">Shaders/FragmentShaders/FragCColorONorm.glsl</file>
+    <file alias="FragCColorWNorm.glsl">Shaders/FragmentShaders/FragCColorWNorm.glsl</file>
+    <file alias="FragUniColorONorm.glsl">Shaders/FragmentShaders/FragUniColorONorm.glsl</file>
+    <file alias="FragUniColorWNorm.glsl">Shaders/FragmentShaders/FragUniColorWNorm.glsl</file>
+    <file alias="FragUVONorm.glsl">Shaders/FragmentShaders/FragUVONorm.glsl</file>
+    <file alias="FragUVWNorm.glsl">Shaders/FragmentShaders/FragUVWNorm.glsl</file>
   </qresource>
 </RCC>

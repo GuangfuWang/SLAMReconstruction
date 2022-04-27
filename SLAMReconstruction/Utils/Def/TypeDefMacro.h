@@ -64,6 +64,7 @@ namespace gf {
      * @NOTE Type alias starting with 'Q' meaning Qt version and ONLY used in UI related calculation.
      */
     using QVec3f = QVector3D;
+    using QVec2f = QVector2D;
     using QTranslation=QVector3D;
     using QVec4f = QVector4D;
     using QQuaternion = QQuaternion;
@@ -72,6 +73,7 @@ namespace gf {
         QQuaternion  q;
         QTranslation t;
     } QTransformation;
+
 
 }
 
