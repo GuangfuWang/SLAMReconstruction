@@ -22,9 +22,9 @@ namespace gf {
     }
 
     void RenderCamera::zoomScene(const float &zs, const unsigned int &option) {
-//        if ( zoomDistance(mCamera->position(), mCamera->viewCenter()) < zoomLimit) {
-//            return;
-//        }
+        if ( zoomDistance(mCamera->position(), mCamera->viewCenter()) < zoomLimit) {
+            return;
+        }
         mCamera->translate(QVec3f(0, 0, zs),
                            (Qt3DRender::QCamera::CameraTranslationOption) option);
     }
@@ -33,7 +33,7 @@ namespace gf {
         return (posSecond - posFirst).length();
     }
 
-    void RenderCamera::zoomViewCenter(const unsigned int &delta, const unsigned int &modifier) {
+    void RenderCamera::zoomViewCenter(const int &delta, const unsigned int &modifier) {
         if ((modifier & Qt::ControlModifier) || mFineMotionEnabled) {
             zoomScene(delta * dt * mZoomSpeed * mFineMotionSpeed);
         } else {
@@ -41,7 +41,7 @@ namespace gf {
         }
     }
 
-    void RenderCamera::zoom(const unsigned int &delta, const unsigned int &modifier) {
+    void RenderCamera::zoom(const int &delta, const unsigned int &modifier) {
         if ((modifier & Qt::ControlModifier) || mFineMotionEnabled) {
             zoomScene(delta * dt * mZoomSpeed * mFineMotionSpeed, Qt3DRender::QCamera::TranslateViewCenter);
         } else {

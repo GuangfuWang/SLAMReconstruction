@@ -25,4 +25,5 @@ set(UTIL_SRC
         ${MathHeader} ${MathSrc}
         ${ConfigMapperHeader} ${ConfigMapperSrc}
         ${UTIL_PREFIX}/Util
-        ${UTIL_PREFIX}/StringHelper/StringHelper.h)
+        ${UTIL_PREFIX}/StringHelper/StringHelper.h
+        ${UTIL_PREFIX}/Timer/Timer.h)

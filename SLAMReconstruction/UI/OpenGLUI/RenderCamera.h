@@ -64,9 +64,9 @@ namespace gf {
 
     public:
         /// this part is mainly for camera controllers.
-        void zoomViewCenter(const unsigned int &delta, const unsigned int &modifier = Qt::NoModifier);
+        void zoomViewCenter(const int &delta, const unsigned int &modifier = Qt::NoModifier);
 
-        void zoom(const unsigned int &delta, const unsigned int &modifier = Qt::NoModifier);
+        void zoom(const int &delta, const unsigned int &modifier = Qt::NoModifier);
 
         void pan(const QPoint &pos, const unsigned int &modifier = Qt::NoModifier);
 
@@ -88,10 +88,10 @@ namespace gf {
     private:
 
         float mZoomSpeed       = 50.0f;
-        float mPanSpeed        = 120.0f;
-        float mRotateSpeed     = 500.0f;
+        float mPanSpeed        = 20.0f;
+        float mRotateSpeed     = 800.0f;
         float mFineMotionSpeed = 0.1f;
-        float dt               = 0.001f;
+        float dt               = 0.0001f;
         float zoomLimit        = 0.16f;
         float mPan             = 0.0f;
         float mTilt            = 0.0f;

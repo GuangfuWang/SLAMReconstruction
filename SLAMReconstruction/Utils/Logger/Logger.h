@@ -105,7 +105,7 @@ class Logger {
   }
 
   template<class... Types>
-  static void Warnning(const QString &msg, const Types &... args) {
+  static void Warning(const QString &msg, const Types &... args) {
 #ifdef GF_LINUX
 	QString
 		msgT = logColorConsole[LogType::Warn] + QDateTime::currentDateTime().toString("[yyyy-MM-dd, hh:mm:ss] ") + msg;
@@ -246,7 +246,7 @@ using Logger = gf::Logger;
 #define GF_DEBUG(MSG, ...)  Logger::Debug(MSG, ##__VA_ARGS__)
 #endif
 #ifndef GF_WARN
-#define GF_WARN(MSG, ...)  Logger::Warnning(MSG, ##__VA_ARGS__)
+#define GF_WARN(MSG, ...)  Logger::Warning(MSG, ##__VA_ARGS__)
 #endif
 #ifndef GF_INFO
 #define GF_INFO(MSG, ...)  Logger::Info(MSG, ##__VA_ARGS__)

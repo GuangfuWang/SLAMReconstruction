@@ -1,11 +1,10 @@
 
-#ifndef SLAMRECONSTRUCTION_SURFTRACKER_H
-#define SLAMRECONSTRUCTION_SURFTRACKER_H
-
+#ifndef SLAMRECONSTRUCTION_SURFGPUTRACKER_H
+#define SLAMRECONSTRUCTION_SURFGPUTRACKER_H
 #include "Tracker.h"
 
-namespace gf {
-    class SurfTracker final : public Tracker {
+namespace gf{
+    class SurfGpuTracker final:public Tracker {
     public:
         void detectKeyPoints(const cv::Mat &sourceImg, Vector<cv::KeyPoint> &dstKeyPoints) override;
 
@@ -20,4 +19,5 @@ namespace gf {
 }
 
 
-#endif //SLAMRECONSTRUCTION_SURFTRACKER_H
+
+#endif //SLAMRECONSTRUCTION_SURFGPUTRACKER_H

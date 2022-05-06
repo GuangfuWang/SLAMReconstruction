@@ -142,7 +142,6 @@ namespace gf {
         mBgColor = QVec3f(0.745f, 0.745f, 0.745f);
         QOpenGLFunctions::glClearColor(mBgColor.x(), mBgColor.y(), mBgColor.z(), 1.0f);
         update();
-        GF_INFO("enter");
         QWidget::dragEnterEvent(event);
     }
 
@@ -196,12 +195,12 @@ namespace gf {
         mRenderDataUniColor = QVec3f(0.11765f, 0.5647f, 1.0f);
 
         Vector<float> temp{
-            0.8f,0.2f,0.6f,0.5f,0.2f,0.1f,
-            0.5f,0.2f,0.6f,0.1f,0.5f,0.1f,
-            0.3f,0.6f,0.1f,0.6f,0.3f,0.1f
-                           };
+                0.8f, 0.2f, 0.6f, 0.5f, 0.2f, 0.1f,
+                0.5f, 0.2f, 0.6f, 0.1f, 0.5f, 0.1f,
+                0.3f, 0.6f, 0.1f, 0.6f, 0.3f, 0.1f
+        };
         mRenderData = new float[18];
-        memcpy(mRenderData,temp.data(),sizeof(float)*18);
+        memcpy(mRenderData, temp.data(), sizeof(float) * 18);
         mNumVertex = 3;
         //enable drag-drop functionality.
         this->setAcceptDrops(true);
@@ -251,11 +250,10 @@ namespace gf {
         mVAO.bind();
         mRenderCamera->update(mShaderProgram);
 
-        if (mDrawType == DrawTypeEnum::ARRAY){
+        if (mDrawType == DrawTypeEnum::ARRAY) {
             QOpenGLFunctions::glDrawArrays(GL_TRIANGLES, 0, mNumVertex);
-            GF_INFO("array %f",mRenderData[0]);
-        }
-        else if (mDrawType == DrawTypeEnum::ELEMENT)
+//            GF_INFO("array %f",mRenderData[0]);
+        } else if (mDrawType == DrawTypeEnum::ELEMENT)
             QOpenGLFunctions::glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT,
                                              nullptr);
         mVAO.release();
@@ -274,13 +272,12 @@ namespace gf {
                 return;
             }
         } else if ((mVertMetaInfo.info & 0x0F) == Meta_Vert_Color) {
-            GF_INFO("Vert_Color");
             mDrawType          = DrawTypeEnum::ARRAY;
             RenderDataSizeByte = sizeof(float) * 6;
             allocateMemForVBO(RenderDataSizeByte);
             mVBO.setUsagePattern(QOpenGLBuffer::StaticDraw);
             if (!setupVertColorVAO()) {
-                GF_INFO("0000");
+                GF_WARN("Cannot setup vao...");
                 return;
             }
         } else if ((mVertMetaInfo.info & 0x0F) == Meta_Vert_Color_Index) {
@@ -382,9 +379,9 @@ namespace gf {
     }
 
     void OpenGLWindow::allocateMemForVBO(unsigned int &bytes_) {
-        if (mRenderData){
+        if (mRenderData) {
             mVBO.allocate(mRenderData, mNumVertex * bytes_);
-            GF_INFO("allocating");
+            GF_INFO("Allocating memory for render data...");
         }
     }
 
